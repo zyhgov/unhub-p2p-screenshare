@@ -22,7 +22,7 @@ export default function Home() {
                         height={32} 
                         className="h-8 w-8" 
                     />
-                    <span className="text-xl font-semibold tracking-tight">UNHub 屏幕共享</span> {/* 可选：添加文字品牌名称 */}
+                    <span className="text-xl font-semibold tracking-tight">UNHub P2P 屏幕共享</span> {/* 可选：添加文字品牌名称 */}
                 </Link>
                 {/* 可以在这里添加导航或空白占位符 */}
             </div>

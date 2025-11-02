@@ -10,12 +10,34 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] }); 
 
 export const metadata = {
-    // 标题强调“联合库UNHub 屏幕分享”
-    title: "联合库UNHub 屏幕分享 - 实时共享您的屏幕", // 翻译: Screen Share - Share Your Screen Instantly
-    // 描述
-    description: "使用简单的房间代码，与任何人即时共享您的屏幕。无需下载或注册。由联合库UNHub提供。", // 翻译: Share your screen instantly with anyone using a simple room code. No downloads or sign-ups required.
-    // 关键词
-    keywords: ["联合库UNHub", "屏幕共享", "webrtc", "在线屏幕共享", "浏览器屏幕共享", "免费屏幕共享", "实时共享屏幕", "屏幕共享工具"], // 翻译: ["screen sharing", "webrtc", "online screen share", "browser screen sharing", "free screen sharing", "share your screen", "share screen", "screen share"]
+    // 标题优化：更具搜索价值和功能描述
+    title: "免费P2P屏幕共享 联合库UNHub - 实时加密传输，极速连接", 
+    // 描述优化：整合所有关键词和支持信息，强调免费、安全和P2P
+    description: "UNHub P2P 屏幕分享工具：免费、实时、点对点（P2P）屏幕共享服务。使用简单的房间代码即时连接，由 Cloudflare 提供安全加密传输支持，杖雍皓提供高性能基础设施服务支持。无需下载，无需注册。", 
+    // 关键词优化：增加“免费”、“安全”、“P2P”、“Cloudflare”等关键词
+    keywords: [
+        "免费屏幕共享", "P2P屏幕共享", "实时加密传输", "UNHub", 
+        "在线屏幕共享工具", "WebRTC", "Cloudflare安全传输", 
+        "杖雍皓基础设施", "无需下载", "屏幕分享"
+    ], 
+    // canonical URL: 添加规范 URL，告诉搜索引擎哪个是主要的版本
+    metadataBase: new URL("https://p2p.zyhorg.cn"),
+    alternates: {
+        canonical: "https://p2p.zyhorg.cn",
+    },
+    // Open Graph 属性 (用于社交媒体分享)
+    openGraph: {
+        title: "UNHub 免费P2P屏幕共享 - 实时加密传输",
+        description: "免费、实时、点对点（P2P）屏幕共享服务。由 Cloudflare 提供安全加密传输支持。",
+        url: "https://p2p.zyhorg.cn",
+        siteName: "联合库UNHub P2P 屏幕分享",
+    },
+    // Twitter Card 属性
+    twitter: {
+        card: 'summary_large_image',
+        title: "UNHub 免费P2P屏幕共享",
+        description: "免费、实时、点对点（P2P）屏幕共享服务。",
+    },
     other: {
         "google-site-verification": process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || ""
     }
@@ -30,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <main className="from-background to-muted flex min-h-screen flex-col justify-between bg-linear-to-b">
                     {children}
                     <footer className="text-muted-foreground px-4 py-8 text-center text-sm">
-                                              {/* Cloudflare 图片：换行并在下方居中显示 */}
+                                                {/* Cloudflare 图片：在文本下方居中显示 */}
                         <div className="mt-2 flex w-full justify-center">
                             <Image 
                                 src="/cloudflare.png" 
@@ -40,14 +62,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                 className="opacity-70" 
                             />
                         </div>
-                        {/* 页脚文本 */}
+                        {/* 文本内容与您的最新版本保持一致，并进行了一些格式微调 */}
                         Design by &nbsp;
                         <Link href="https://tonghohin.vercel.app" className="underline" target="_blank">
                             <b>Hin</b>
                         </Link>
-                        . &nbsp;&nbsp;<b>联合库UNHub</b> P2P 屏幕分享 <br />
+                        . &nbsp;&nbsp;
+                        <Link href="https://docs.zyhorg.cn" className="underline" target="_blank">
+                            <b>联合库UNHub</b>
+                        </Link> P2P 屏幕共享 <br />
                         <b>杖雍皓</b>提供基础设施服务支持 <br />
                         <b>Cloudflare</b> 提供安全加密传输服务支持
+
+
                     </footer>
                 </main>
                 <ClarityScript />
