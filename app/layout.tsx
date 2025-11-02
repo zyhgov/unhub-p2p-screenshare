@@ -43,11 +43,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         {/* 页脚文本 */}
                         Design by &nbsp;
                         <Link href="https://tonghohin.vercel.app" className="underline" target="_blank">
-                            Hin
+                            <b>Hin</b>
                         </Link>
-                        . &nbsp;&nbsp;联合库UNHub 屏幕分享 <br />
-                        杖雍皓提供基础设施服务支持 <br />
-                        Cloudflare 提供安全服务
+                        . &nbsp;&nbsp;<b>联合库UNHub</b> P2P 屏幕分享 <br />
+                        <b>杖雍皓</b>提供基础设施服务支持 <br />
+                        <b>Cloudflare</b> 提供安全加密传输服务支持
                     </footer>
                 </main>
                 <ClarityScript />
